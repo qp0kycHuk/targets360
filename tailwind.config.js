@@ -1,9 +1,9 @@
 const elementsSizes = {
-  xs: '24px',
-  sm: '32px',
-  base: '42px',
-  lg: '52px',
-  xl: '64px',
+  xs: '30px',
+  sm: '40px',
+  base: '50px',
+  lg: '60px',
+  xl: '70px',
 }
 
 const headingStyles = {
@@ -38,6 +38,7 @@ module.exports = {
     colors: {
       primary: withOpacity('--primary-rgb'),
       sec: withOpacity('--sec-rgb'),
+      accent: withOpacity('--accent-rgb'),
       blue: withOpacity('--blue-rgb'),
       red: withOpacity('--red-rgb'),
       green: withOpacity('--green-rgb'),
@@ -50,12 +51,16 @@ module.exports = {
       default: withOpacity('--default-rgb'),
     },
     fontFamily: {
-      base: "'SF Pro Display', arial, helvetica, sans-serif",
+      base: "'Inter', arial, helvetica, sans-serif",
+      alt: "'Hauora', arial, helvetica, sans-serif",
     },
     zIndex: [0, 321, 322, 323, 324, 325, 326, 327, 328, 329, 'auto'],
     extend: {
       inputSize: elementsSizes,
       btnSize: elementsSizes,
+      borderRadius: {
+        '4xl': '2rem'
+      },
       spacing: {
         [4.5]: 4.5 * 4 / 16 + 'rem',
         [12.5]: 12.5 * 4 / 16 + 'rem',
@@ -77,10 +82,10 @@ module.exports = {
     require('@qpokychuk/tailwind-button-plugin'),
     require('@qpokychuk/tailwind-ratio-plugin'),
     require('@qpokychuk/tailwind-input-plugin')({
-      border: "1px solid theme('colors.default / 40%')",
+      border: "1px solid theme('colors.default / 20%')",
     }),
     require('@qpokychuk/tailwind-checkbox-plugin')({
-      border: "1px solid theme('colors.default / 40%')",
+      border: "1px solid theme('colors.default / 20%')",
     }),
     require('tailwindcss-border-styles')(),
   ],
