@@ -1,0 +1,45 @@
+<%= require('./html-includes/header.html')() %>
+<%= require('./html-includes/page-header.html')() %>
+
+<section class="p-section">
+  <div class="title mb-12">Специалисты</div>
+
+  <div class="grid lg:grid-cols-2 gap-7">
+    <% for(let i = 0; i < 10; i++) { %>
+    <div class="solution-item">
+      <div class="solution-item-header">
+        <div class="solution-item-image">
+          <c-icon class="icon" href="img/icons.svg#user-id"></c-icon>
+        </div>
+        <div class="text-lg sm:text-2xl font-bold font-alt">
+          Проект-менеджер
+          по интернет-маркетингу
+        </div>
+      </div>
+      <div class="solution-item-content">
+        <div class="opacity-80">
+          Курирует работу с любыми подрядчиками в области
+          интернет-маркетинга. Вместе с вами этот специалист формирует
+          тактику и стратегию продвижения, фиксирует ожидаемый KPI,
+          ставит задачи и контролирует результат.
+        </div>
+        <div class="mt-6 font-semibold mb-5">Что входит в услугу:</div>
+        <div class="flex flex-col gap-2.5">
+          <% for(let i = 0; i < 4; i++) { %>
+          <div class="flex items-center gap-3">
+            <div class="size-5 flex rounded-full bg-sec shrink-0">
+              <c-icon class="icon m-auto text-sm text-accent" href="img/icons.svg#gal-ochka-alt"></c-icon>
+            </div>
+            <div class="opacity-80">Курирование работы с подрядчиками </div>
+          </div>
+          <% } %>
+        </div>
+        <button class="btn btn-primary btn-fill mt-12 sm:px-14 max-sm:w-full">Подробнее</button>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</section>
+
+<%= require('./html-includes/connect.html')() %>
+<%= require('./html-includes/footer.html')() %>

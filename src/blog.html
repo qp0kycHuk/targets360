@@ -1,0 +1,32 @@
+<%= require('./html-includes/header.html')() %>
+<%= require('./html-includes/page-header.html')() %>
+
+
+<section class="p-section">
+  <div class="grid lg:grid-cols-3 gap-7">
+    <% for(let i = 0; i < 10; i++) { %>
+    <div class="blog-item">
+      <div class="blog-item-image ratio ratio-[357/225] rounded-3xl overflow-hidden">
+        <img src="img/test.jpg" alt="" class="absolute-fit object-cover">
+      </div>
+      <div class="sm:px-2">
+        <div class="lg:text-2xl font-alt font-semibold mb-3 lg:mb-6">
+          Впервые протестировали
+          «Товары и предложения»
+          в Яндексе и получили 386
+          переходов
+        </div>
+        <div class="text-sm font-medium mb-3 lg:mb-6">маркетинг</div>
+        <div class="line-clamp-2 max-lg:text-sm">
+          Подборка digital-сервисов и инструментов,
+          чтобы улучшить маркетинг, продажи Подборка digital-сервисов и инструментов,
+          чтобы улучшить маркетинг, продажи
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</section>
+
+<%= require('./html-includes/connect.html')() %>
+<%= require('./html-includes/footer.html')() %>
