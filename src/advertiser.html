@@ -1,12 +1,5 @@
 <%= require('./html-includes/header.html')() %>
-
-<section class="page-header">
-  <div class="page-header-title">Рекламодателю</div>
-  <div class="lg:text-xl">
-    Узнайте о возможностях, которые Таргетс360 <br class="max-sm:hidden">
-    предоставляет клиенту маркетинговых услуг
-  </div>
-</section>
+<%= require('./html-includes/page-header.html')() %>
 
 <section class="p-section">
   <div class="title mb-12">Таргетс360 предоставляет</div>
@@ -109,10 +102,6 @@
   </div>
 </section>
 
-<section class="connect">
-  <div class="title">Свяжитесь с нами по любым вопросам</div>
-  <button class="btn btn-primary btn-fill sm:px-14 max-sm:w-full">Связаться</button>
-</section>
 
-
+<%= require('./html-includes/connect.html')() %>
 <%= require('./html-includes/footer.html')() %>
