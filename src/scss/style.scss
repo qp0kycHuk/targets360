@@ -547,6 +547,37 @@ body {
   @media (max-width:theme('screens.sm')) {
     border-radius: 24px;
   }
+
+  &-image {
+    font-size      : 38px;
+    width          : 82px;
+    height         : 94px;
+    border-radius  : 24px;
+    background     : linear-gradient(180deg, rgba(255, 255, 255, 0.33) 0%, rgba(255, 255, 255, 0.78) 100%);
+    z-index        : 1;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    position       : relative;
+    flex-shrink    : 0;
+
+    @media (max-width:theme('screens.sm')) {
+      width        : 60px;
+      height       : 72px;
+      font-size    : 24px;
+      border-radius: 16px;
+    }
+
+    &::before {
+      content      : '';
+      position     : absolute;
+      inset        : 0;
+      border       : 2px solid #fff;
+      border-radius: inherit;
+      mask         : linear-gradient(142deg, #000 0%, rgba(0, 0, 0, 0) 48%);
+
+    }
+  }
 }
 
 .solution {
