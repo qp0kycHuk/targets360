@@ -30,4 +30,20 @@ function loadHandler() {
 
   swiper.init()
   animations.init()
+  document.addEventListener('toggleopen', toggleOpenHandler)
+  document.addEventListener('toggleclose', toggleCloseHandler)
+}
+
+const menusIds = ['lk-menu', 'menu', 'catalog-filter']
+
+function toggleOpenHandler(event: any) {
+  if (menusIds.includes(event.detail.target.id)) {
+    document.body.classList.add('menu-opened')
+  }
+}
+
+function toggleCloseHandler(event: any) {
+  if (menusIds.includes(event.detail.target.id)) {
+    document.body.classList.remove('menu-opened')
+  }
 }
