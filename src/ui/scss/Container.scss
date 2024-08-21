@@ -33,3 +33,9 @@ section {
     --section-width: calc(theme(container.xl));
   }
 }
+
+@media (max-width: theme('screens.xxs')) {
+  :root {
+    --section-width: calc(100vw - 16px);
+  }
+}

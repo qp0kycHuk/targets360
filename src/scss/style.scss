@@ -147,6 +147,21 @@ body {
   padding-top    : 15px;
   padding-bottom : 15px;
   background     : theme('colors.l3');
+
+  @media (max-width:theme('screens.sm')) {
+    padding-top   : 10px;
+    padding-bottom: 10px;
+  }
+
+  &-logo {
+    @media (max-width:theme('screens.sm')) {
+      width: 112px;
+    }
+
+    @media (max-width:theme('screens.xxs')) {
+      width: 92px;
+    }
+  }
 }
 
 .started {

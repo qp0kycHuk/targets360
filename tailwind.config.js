@@ -22,6 +22,7 @@ module.exports = {
       styles: true,
     },
     screens: {
+      xxs: 330 + 29.98 + 'px',
       xs: 420 + 29.98 + 'px',
       sm: 580 + 29.98 + 'px',
       md: 740 + 29.98 + 'px',
