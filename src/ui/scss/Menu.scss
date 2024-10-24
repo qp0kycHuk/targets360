@@ -1,0 +1,60 @@
+@import '@qpokychuk/wc-menu/dist/index.css';
+
+c-menu-items {
+  --offset: 8px;
+
+  z-index   : theme('zIndex.1');
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.04);
+  border    : 1px solid theme('colors.default / 5%');
+  width     : 224px;
+  background: theme('colors.l3');
+  color     : theme('colors.default');
+
+  transition: .25s var(--elastic, ease);
+
+  @media (max-width:theme('screens.md')) {
+    position  : fixed;
+    inset     : auto 0 0 !important;
+    width     : 100% !important;
+    max-height: 400px;
+    overflow  : auto;
+    z-index   : theme('zIndex.4');
+    transform : none;
+    transition: .25s ease;
+    margin    : 0 !important;
+  }
+
+
+  &:not([data-active]) {
+    --scale: .95;
+
+    @media (max-width:theme('screens.md')) {
+      transform: translateY(20px) !important;
+    }
+  }
+}
+
+c-menu-shadow {
+  position  : fixed;
+  inset     : 0;
+  z-index   : calc(theme('zIndex.4') - 1);
+  background: rgba(0, 0, 0, 0.5);
+  transition: .25s ease;
+
+
+  @media (min-width:theme('screens.md')) {
+    display: none;
+  }
+
+  &:not([data-active]) {
+    pointer-events: none;
+    opacity       : 0;
+
+  }
+}
+
+body.c-menu-opened {
+  @media (max-width:theme('screens.md')) {
+    overflow: hidden;
+  }
+}
